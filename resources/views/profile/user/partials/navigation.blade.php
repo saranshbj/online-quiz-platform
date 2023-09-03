@@ -7,18 +7,19 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
             <span class="navbar-toggler-icon"></span>
         </button>
-
+        {{-- nav menu --}}
         <div class="collapse navbar-collapse" id="navmenu">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a href="{{ route('user.dashboard') }}" class="nav-link {{ Request::is('user/dashboard') ? 'active' : '' }}">Dashboard</a>
-                </li>
-                {{-- <li class="nav-item">
-                    <a href="" class="nav-link">Profile</a>
+                    <a href="{{ route('user.dashboard') }}"
+                        class="nav-link {{ Request::is('user/dashboard') ? 'active' : '' }}">Dashboard</a>
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link">Job Applied</a>
-                </li> --}}
+                    <a href="{{ route('user.seeQuiz') }}" class="nav-link">Available Quizzes</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('user.quizResult') }}" class="nav-link">View Results</a>
+                </li>
             </ul>
             <div class="dropdown-center">
                 <button class="btn btn-secondary text-bg-warning dropdown-toggle ms-3" type="button"
@@ -38,9 +39,11 @@
                                 Log Out
                             </a>
                         </form>
+                         <!-- Authentication ends -->
                     </li>
                 </ul>
             </div>
         </div>
+         {{-- nav menu ends --}}
     </div>
 </nav>

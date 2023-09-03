@@ -14,16 +14,15 @@
                     <a href="{{ route('admin.dashboard') }}"
                         class="nav-link {{ Request::is('admin/dashboard') ? 'active' : '' }}">Dashboard</a>
                 </li>
-                {{-- <li class="nav-item active">
-                    <a href="" class="nav-link">Job Posted</a>
+                <li class="nav-item active">
+                    <a href="{{ route('admin.quizzes') }}" class="nav-link">Added Quizzes</a>
                 </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link">Applicants</a>
-                </li> --}}
+                <li class="nav-item active">
+                    <a href="{{ route('admin.userResult') }}" class="nav-link">See Results</a>
+                </li>
             </ul>
-            <a href="" class="btn btn-outline-warning mx-3">Post Quiz</a>
             <div class="dropdown-center">
-                <button class="btn btn-secondary text-bg-warning dropdown-toggle " type="button"
+                <button class="btn btn-secondary text-bg-warning dropdown-toggle ms-2" type="button"
                     data-bs-toggle="dropdown" aria-expanded="false">
                     {{ Auth::user()->name }}
                 </button>

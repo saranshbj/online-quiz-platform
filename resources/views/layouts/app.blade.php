@@ -13,6 +13,7 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
     <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
@@ -28,7 +29,19 @@
     <div class="min-h-screen bg-gray-100">
         @yield('content')
     </div>
+    <script>
+        // common error and success message components
+        function showMessage(message, type) {
+            var alertDiv = $('<div class="alert" role="alert"></div>');
+            alertDiv.addClass('alert-' + type);
+            alertDiv.text(message);
+            $('#messageContainer').empty().append(alertDiv);
+        }
 
+        function clearMessages() {
+            $('#messageContainer').empty();
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
     </script>
